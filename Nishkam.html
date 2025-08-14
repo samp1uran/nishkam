@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CA Nishkam Bansal | Chartered Accountancy Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+        }
+
+        /* Animation Styles */
+        .img-zoom {
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            transform-origin: center;
+        }
+        .img-zoom:hover {
+            transform: scale(1.03);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .img-pop {
+            transition: transform 0.3s ease;
+        }
+        .img-pop:hover {
+            transform: scale(1.05) rotate(-2deg);
+        }
+
+        input[type="file"]:hover + div {
+            border-color: #3b82f6;
+            background-color: #f8fafc;
+        }
+
+        @keyframes countUp {
+            from { 
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-blue-600">CA Nishkam Bansal</div>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link relative text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#services" class="nav-link relative text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#about" class="nav-link relative text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#testimonials" class="nav-link relative text-gray-7\00 hover:text-blue-600">Testimonials</a>
+                    <a href="#careers" class="nav-link relative text-gray-700 hover:text-blue-600">Careers</a>
+                    <a href="#contact" class="nav-link relative text-gray-700 hover:text-blue-600">Contact</a>
+                </nav>
+                
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl text-gray-600"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Strategic Financial Solutions for Your Business</h1>
+                <p class="text-xl mb-8 opacity-90">Professional chartered accountancy services tailored to meet your unique financial needs.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Get Consultation</a>
+                    <a href="#services" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Our Services</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff2cea41-2dcd-495b-8fce-1d644b21448d.png" alt="Professional chartered accountant reviewing financial documents in a modern office" class="rounded-lg shadow-xl img-zoom fade-in">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Professional Services</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive financial solutions designed to help your business grow and comply with regulations.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Tax Planning</h3>
+                    <p class="text-gray-600 mb-4">Strategic tax planning to minimize liabilities while maximizing compliance with all regulations.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Financial Auditing</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive financial audits providing accurate insights into your company's financial health.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Business Consulting</h3>
+                    <p class="text-gray-600 mb-4">Expert advice on business strategy, financial planning, and operational efficiency improvements.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">GST Services</h3>
+                    <p class="text-gray-600 mb-4">Complete GST solutions including registration, filing returns, and compliance management.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Accounting Services</h3>
+                    <p class="text-gray-600 mb-4">Professional bookkeeping and accounting services to keep your financial records accurate.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 transition duration-300">
+                    <div class="text-blue-600 mb-4 text-4xl">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Investment Advisory</h3>
+                    <p class="text-gray-600 mb-4">Guidance on investment opportunities aligned with your financial goals and risk appetite.</p>
+                    <a href="#" class="text-blue-600 font-medium flex items-center">
+                        Learn more <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fcd32a23-378e-4ceb-88d3-d6a1b04d6cbe.png" alt="CA Nishkam Bansal in professional setting working with clients" class="rounded-lg shadow-lg img-pop fade-in" style="animation-delay: 0.2s;">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About CA Nishkam Bansal</h2>
+                    <p class="text-gray-600 mb-6 text-lg">With over 15 years of experience in chartered accountancy, Nishkam Bansal brings expertise, precision, and dedication to every client engagement.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-800">Qualifications</h4>
+                                <p class="text-gray-600">Chartered Accountant (CA) certified by ICAI with additional certifications in international taxation.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-800">Experience</h4>
+                                <p class="text-gray-600">Extensive experience working with businesses across various industries and sizes from startups to established corporations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-600 mt-1 mr-4">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-lg text-gray-800">Approach</h4>
+                                <p class="text-gray-600">Client-centric approach focused on understanding unique needs and delivering customized financial solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 inline-block">
+                            Download Full Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Achievements Counter -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2 counter" data-count="250">0</div>
+                    <div class="text-gray-600">Satisfied Clients</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2 counter" data-count="15+"></div>
+                    <div class="text-gray-600">Years Experience</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2 counter" data-count="50+"></div>
+                    <div class="text-gray-600">Business Partners</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="text-4xl font-bold text-blue-600 mb-2 counter" data-count="100%"></div>
+                    <div class="text-gray-600">Compliance Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Client Testimonials</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">What our clients say about our professional services and expertise.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3759053c-8420-42c6-a613-cf30663e12d1.png" alt="Portrait of Rajesh Mehta, Director at ABC Enterprises" class="w-16 h-16 rounded-full object-cover img-zoom">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Rajesh Mehta</h4>
+                            <p class="text-gray-600 text-sm">Director, ABC Enterprises</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700">
+                        <p>"CA Bansal's tax planning strategies saved us over 30% on our annual tax liabilities while ensuring full compliance. His attention to detail is unmatched."</p>
+                    </div>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d5e7a22d-6762-45ef-a58a-6180d1b6aa65.png" alt="Portrait of Priya Sharma, CFO at XYZ Corp" class="w-16 h-16 rounded-full object-cover img-zoom">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Priya Sharma</h4>
+                            <p class="text-gray-600 text-sm">CFO, XYZ Corp</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700">
+                        <p>"The financial restructuring advice we received was transformative for our business. CA Bansal combines deep technical knowledge with practical business acumen."</p>
+                    </div>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e58ef38f-2ff6-4103-8634-fa68cb0a64a2.png" alt="Portrait of Amit Patel, Founder of Startup Innovations" class="w-16 h-16 rounded-full object-cover img-zoom">
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Amit Patel</h4>
+                            <p class="text-gray-600 text-sm">Founder, Startup Innovations</p>
+                        </div>
+                    </div>
+                    <div class="text-gray-700">
+                        <p>"From GST compliance to investor readiness, CA Bansal has been an invaluable partner throughout our startup journey. Highly recommend his services."</p>
+                    </div>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Careers Section -->
+    <section id="careers" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Join Our Team</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">We're looking for talented professionals to join our growing team.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-xl shadow-md">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="candidate-name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="candidate-name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="candidate-email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="candidate-email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="candidate-phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="candidate-phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label for="candidate-position" class="block text-gray-700 mb-2">Position Applying For</label>
+                            <select id="candidate-position" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                <option value="">Select Position</option>
+                                <option value="Accountant">Accountant</option>
+                                <option value="Auditor">Auditor</option>
+                                <option value="Tax Consultant">Tax Consultant</option>
+                                <option value="Financial Analyst">Financial Analyst</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="candidate-experience" class="block text-gray-700 mb-2">Years of Experience</label>
+                        <input type="text" id="candidate-experience" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="candidate-coverletter" class="block text-gray-700 mb-2">Cover Letter</label>
+                        <textarea id="candidate-coverletter" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                    </div>
+
+                    <div class="mb-6">
+                        <label for="candidate-resume" class="block text-gray-700 mb-2">Resume (PDF/DOC)</label>
+                        <div class="relative border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
+                            <input type="file" id="candidate-resume" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-cloud-upload-alt text-4xl text-blue-500 mb-2"></i>
+                                <p class="text-gray-600">Drag and drop your file here or click to browse</p>
+                                <p class="text-sm text-gray-500 mt-1">Max file size: 5MB</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">
+                        Submit Application
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Contact us for a consultation or to learn more about our services.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-10">
+                <!-- Contact Form -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md">
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-md h-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4 text-xl">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Office Address</h4>
+                                    <p class="text-gray-600">123 Financial District, Main Road<br>Mumbai, Maharashtra 400001</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4 text-xl">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone Number</h4>
+                                    <p class="text-gray-600">+91 98765 43210<br>+91 22 2345 6789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4 text-xl">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email Address</h4>
+                                    <p class="text-gray-600">info@cabansal.com<br>consult@cabansal.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="text-blue-600 mt-1 mr-4 text-xl">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Working Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-4">Connect With Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-twitter text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="text-2xl font-bold text-white mb-4">CA Nishkam Bansal</div>
+                    <p class="text-gray-400">Professional chartered accountancy services with expertise in taxation, auditing, and financial consulting.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tax Planning</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Financial Auditing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Business Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">GST Services</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for financial insights and updates.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button class="bg-blue-600 px-4 py-2 rounded-r-lg hover:bg-blue-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">© 2023 CA Nishkam Bansal. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const navLinks = document.querySelector('nav');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-white');
+            navLinks.classList.toggle('p-4');
+            navLinks.classList.toggle('space-y-4');
+            navLinks.classList.toggle('space-x-8');
+            navLinks.classList.toggle('shadow-md');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (!navLinks.classList.contains('hidden')) {
+                    navLinks.classList.add('hidden');
+                }
+            });
+        });
+
+        // Animate counters when scrolled into view
+        const counters = document.querySelectorAll('.counter');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const endValue = parseInt(target.getAttribute('data-count'));
+                    let startValue = 0;
+                    const duration = 2000;
+                    const increment = endValue / (duration / 16);
+                    
+                    const timer = setInterval(() => {
+                        startValue += increment;
+                        target.textContent = `${Math.floor(startValue)}${target.getAttribute('data-count').includes('+') ? '+' : '%'}`;
+                        
+                        if (startValue >= endValue) {
+                            target.textContent = `${endValue}${target.getAttribute('data-count').includes('+') ? '+' : '%'}`;
+                            clearInterval(timer);
+                            observer.unobserve(target);
+                        }
+                    }, 16);
+                }
+            });
+        }, {threshold: 0.5});
+
+        counters.forEach(counter => observer.observe(counter));
+    </script>
+</body>
+</html>
